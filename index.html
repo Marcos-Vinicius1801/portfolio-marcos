@@ -1,118 +1,558 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../dist/output.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <title>Portfolio - Marcos Vinicius</title>
-  </head>
-  <body class="black">
-    <div class="relative isolate overflow-hidden mbg-right-top">
-      <img src="assets/bannerheader.jpg">
-      <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
-        <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-      </div>
-      <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
-        <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-      </div>
-    </div>
-    <div class="container-fluid purple social">
-      <div class="container">
-        <ul class="list-group d-flex flex-row justify-content-center">
-          <li class="list-group-item">
-            <a href="https://github.com/Marcos-Vinicius1801">
-              <img src="assets/github.png" id="github" alt="" srcset="">
-            </a>
-          </li>
-          <li class="list-group-item">
-            <a href="https://www.linkedin.com/in/marcos-vinicius1801/">
-              <img src="assets/linkedin.png" id="linkedin" alt="" srcset="">
-            </a>
-          </li>
-          <li class="list-group-item">
-            <a href="mailto:mbwork1805@gmail.com">
-              <img src="assets/email.png" id="email" alt="" srcset="">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="parallax"></div>
-      </div>
-    </div>
-    <div class="container-fluid max-width box ">
-      <div class="container aboutme black">
-        <div class="row justify-center">
-          <h2 class="title text-center">Sobre mim</h2>
-          <p class="text-wrapper"> Desenvolvedor, mecânico e piloto de drift. Digamos que eu sou um profissional que ama desafios embora seja uma frase chichê, estaria eu errado se dissese que não. Estudo programação desde 2015, entrei em uma época conturbada, e não pude seguir diretamente em ti. Mas isso não me afastou dos meus sonhos. Por sempre estar ligado a tecnologia e sempre me mantive atento na área, e voltei com força total. Sempre estou estudando e procurando me atualizar. Sou fã tanto de frontend quanto de backend </p>
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfólio de Fotografia e Vídeos">
+    <meta name="author" content="Seu Nome">
+    <title>Meu Portfólio</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-font: 'Playfair Display', serif;
+            --secondary-font: 'Source Sans Pro', sans-serif;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --border-color: #e8e8e8;
+        }
+
+        body {
+            font-family: var(--secondary-font);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header minimalista */
+        .main-header {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-family: var(--primary-font);
+            font-weight: 300;
+            font-size: 1.8rem;
+            color: var(--text-dark) !important;
+            text-decoration: none;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: var(--text-dark) !important;
+            margin: 0 15px;
+        }
+
+        /* Hero section */
+        .hero {
+            margin-top: 80px;
+            padding: 100px 0;
+            text-align: center;
+            background: #fafafa;
+        }
+
+        .hero h1 {
+            font-family: var(--primary-font);
+            font-weight: 300;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Portfolio grid */
+        .portfolio-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: var(--primary-font);
+            font-weight: 300;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-dark);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-info h3 {
+            font-family: var(--primary-font);
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            font-weight: 300;
+        }
+
+        .portfolio-info p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .video-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255,255,255,0.9);
+            color: var(--text-dark);
+            border: none;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .video-play-icon:hover {
+            background: white;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        /* Modal personalizado */
+        .modal-content {
+            border: none;
+            border-radius: 0;
+        }
+
+        .modal-header {
+            border-bottom: 1px solid var(--border-color);
+            padding: 30px;
+        }
+
+        .modal-title {
+            font-family: var(--primary-font);
+            font-weight: 300;
+            font-size: 1.5rem;
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+
+        .modal-img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+
+        .modal-video {
+            width: 100%;
+            max-height: 80vh;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: #f8f9fa;
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-content h4 {
+            font-family: var(--primary-font);
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-dark);
+        }
+
+        .copyright {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Animações suaves */
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header minimalista -->
+    <nav class="navbar navbar-expand-lg main-header">
+        <div class="container">
+            <a class="navbar-brand" href="#">Marcos Vinicius Brasilino</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-    </div>
-    <div class="container-fluid">
-      <div class="container projects">
-        <div class="row">
-          <div class="grid">
-            <div class="item1 grid-box">
-              <h2 class="title text-center">Projetos</h2>
-            </div>
-            </p>
-            <div class="item2 grid-box">
-              <p class="text-wrapper"> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantic </p>
-            </div>
-            <div class="item3 grid-box">
-              <p class="text-wrapper"> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantic </p>
-            </div>
-            <div class="item4 grid-box">
-              <p class="text-wrapper"> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantic </p>
-            </div>
-            <div class="item5 grid-box">
-              <p class="text-wrapper"> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantic </p>
-            </div>
-            <div class="item6 grid-box">
-              <p class="text-wrapper"> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantic </p>
-            </div>
-            <div class="item7 grid-box">
-              <p class="text-wrapper"> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantic </p>
-            </div>
-          </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+        <div class="container">
+            <h1>Capturando Momentos Únicos</h1>
+            <p>Fotógrafo especializado em retratos, eventos e narrativas visuais. Cada imagem conta uma história, cada vídeo preserva uma emoção.</p>
         </div>
-      </div>
-    </div>
-    </div>
-    </div>
-    <div class="container-fluid workexperience max-width  ">
-      <div class="container">
-        <div class="row justify-center black">
-          <h2 class="title text-center">Experiências</h2>
-          <div class="container line ">
-            <div class="work ">
-              <h2>Desenvolvedor Full Stack</h2>
-              <h4>Jan de 2020 - ago de 2020 · 8 meses</h4>
-              <p> Integração de dados das estações meteorológicas para agricultores; Desenvolvimento de features e manutenção de base de código: Integração de dados das estações meteorológicas para agricultores; </p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">Fotografias</h2>
+            <div class="portfolio-grid fade-in">
+                <!-- Fotografia 1 -->
+                <div class="portfolio-item" onclick="openModal('image', 'https://picsum.photos/1200/900?random=1', 'Retrato Artístico')">
+                    <img src="https://picsum.photos/600/400?random=1" class="portfolio-img" alt="Retrato Artístico">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Retrato Artístico</h3>
+                            <p>Exploração de luz natural e composição</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fotografia 2 -->
+                <div class="portfolio-item" onclick="openModal('image', 'https://picsum.photos/1200/900?random=2', 'Paisagem Urbana')">
+                    <img src="https://picsum.photos/600/400?random=2" class="portfolio-img" alt="Paisagem Urbana">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Paisagem Urbana</h3>
+                            <p>Geometria e movimento na cidade</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fotografia 3 -->
+                <div class="portfolio-item" onclick="openModal('image', 'https://picsum.photos/1200/900?random=3', 'Natureza Selvagem')">
+                    <img src="https://picsum.photos/600/400?random=3" class="portfolio-img" alt="Natureza Selvagem">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Natureza Selvagem</h3>
+                            <p>Momentos únicos da vida selvagem</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fotografia 4 -->
+                <div class="portfolio-item" onclick="openModal('image', 'https://picsum.photos/1200/900?random=4', 'Casamento')">
+                    <img src="https://picsum.photos/600/400?random=4" class="portfolio-img" alt="Casamento">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Casamento</h3>
+                            <p>Momentos especiais e emoções autênticas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fotografia 5 -->
+                <div class="portfolio-item" onclick="openModal('image', 'https://picsum.photos/1200/900?random=5', 'Moda')">
+                    <img src="https://picsum.photos/600/400?random=5" class="portfolio-img" alt="Moda">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Moda</h3>
+                            <p>Estilo e elegância em cada frame</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fotografia 6 -->
+                <div class="portfolio-item" onclick="openModal('image', 'https://picsum.photos/1200/900?random=6', 'Arquitetura')">
+                    <img src="https://picsum.photos/600/400?random=6" class="portfolio-img" alt="Arquitetura">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Arquitetura</h3>
+                            <p>Linhas, formas e perspectivas</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="work">
-              <h2>Analista de suporte Sonda IT</h2>
-              <h4>Jan de 2020 - ago de 2020 · 8 meses</h4>
-              <p> Suporte para clientes de aviação comercial, defesa e executiva da Embraer. Utilização de inglês falado e escrito em ligações e e-mail para América do Norte, Europa e Ásia Abertura de tickets Follow-Up Troubleshooting Atendimento SAP corporativo. Suporte em sistemas de segurança, manuais e peças de aeronaves em escopo nível 1 </p>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="parallax-footer"></div>
-      </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
-  </body>
+    </section>
+
+    <!-- Seção de Vídeos -->
+    <section class="portfolio-section" style="background: #fafafa;">
+        <div class="container">
+            <h2 class="section-title">Vídeos</h2>
+            <div class="portfolio-grid fade-in">
+                <!-- Vídeo 1 -->
+                <div class="portfolio-item" onclick="openModal('video', 'https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4', 'Vídeo Promocional')">
+                    <img src="https://picsum.photos/600/400?random=7" class="portfolio-img" alt="Vídeo Promocional">
+                    <div class="video-play-icon">▶</div>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Vídeo Promocional</h3>
+                            <p>Narrativa visual envolvente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vídeo 2 -->
+                <div class="portfolio-item" onclick="openModal('video', 'https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4', 'Documentário')">
+                    <img src="https://picsum.photos/600/400?random=8" class="portfolio-img" alt="Documentário">
+                    <div class="video-play-icon">▶</div>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Documentário</h3>
+                            <p>Histórias reais capturadas em vídeo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vídeo 3 -->
+                <div class="portfolio-item" onclick="openModal('video', 'https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4', 'Time-lapse')">
+                    <img src="https://picsum.photos/600/400?random=9" class="portfolio-img" alt="Time-lapse">
+                    <div class="video-play-icon">▶</div>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Time-lapse</h3>
+                            <p>O tempo em movimento acelerado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="portfolio-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Sobre</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.8;">
+                        Sou um fotógrafo apaixonado por capturar a essência das pessoas e lugares. 
+                        Com mais de 5 anos de experiência, especializo-me em retratos, eventos e 
+                        produção audiovisual. Cada projeto é uma nova oportunidade de contar 
+                        histórias através das lentes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <h4>Entre em Contato</h4>
+                <div class="footer-links">
+                    <a href="mailto:seu@email.com">Email</a>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">WhatsApp</a>
+                    <a href="#" target="_blank">Behance</a>
+                </div>
+                <p class="copyright">&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para exibir imagens e vídeos -->
+    <div class="modal fade" id="mediaModal" tabindex="-1" aria-labelledby="mediaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mediaModalLabel">Título da Mídia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img id="modalImage" class="modal-img d-none" src="" alt="">
+                    <video id="modalVideo" class="modal-video d-none" controls>
+                        <source src="" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </modal>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function openModal(type, src, title) {
+            const modal = new bootstrap.Modal(document.getElementById('mediaModal'));
+            const modalTitle = document.getElementById('mediaModalLabel');
+            const modalImage = document.getElementById('modalImage');
+            const modalVideo = document.getElementById('modalVideo');
+            
+            modalTitle.textContent = title;
+            
+            if (type === 'image') {
+                modalImage.src = src;
+                modalImage.classList.remove('d-none');
+                modalVideo.classList.add('d-none');
+                modalVideo.pause();
+            } else if (type === 'video') {
+                modalVideo.querySelector('source').src = src;
+                modalVideo.load();
+                modalVideo.classList.remove('d-none');
+                modalImage.classList.add('d-none');
+            }
+            
+            modal.show();
+        }
+
+        // Limpar modal quando fechar
+        document.getElementById('mediaModal').addEventListener('hidden.bs.modal', function () {
+            const modalImage = document.getElementById('modalImage');
+            const modalVideo = document.getElementById('modalVideo');
+            
+            modalImage.src = '';
+            modalVideo.querySelector('source').src = '';
+            modalVideo.pause();
+        });
+
+        // Scroll suave para navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animação de fade-in ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos para animação
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
 </html>
