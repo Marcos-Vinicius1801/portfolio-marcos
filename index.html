@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Portfólio de Fotografia e Vídeos">
-    <meta name="author" content="Seu Nome">
-    <title>SEU NOME | Fotógrafo</title>
+    <meta name="author" content="Marcos Brasilino">
+    <title>Marcos Brasilino | Filmmaker & Fotógrafo</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -57,7 +57,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: url(assets/mainheader.jpg) no-repeat center center/cover;
             position: relative;
             overflow: hidden;
         }
@@ -74,35 +74,43 @@
         }
 
         .hero-content {
+            text-align: left;
             position: relative;
             z-index: 2;
             color: white;
             max-width: 800px;
             padding: 0 20px;
         }
-
+        .hero-name {
+            font-family: var(--primary-font);
+            font-size: 9.375rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
         .hero-title {
-            font-family: var(--accent-font);
-            font-size: clamp(3rem, 8vw, 6rem);
+            font-size: 5.375rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-weight: 300;
             margin-bottom: 20px;
             letter-spacing: -2px;
+
         }
 
         .hero-subtitle {
             font-size: clamp(1.2rem, 3vw, 1.8rem);
-            font-weight: 300;
+            font-weight: bolder;
             opacity: 0.9;
             margin-bottom: 40px;
             letter-spacing: 2px;
             text-transform: uppercase;
+            color: #d41c1c;
         }
 
         .hero-description {
-            font-size: 1.1rem;
+            font-size: 1.6rem;
             opacity: 0.8;
             max-width: 600px;
-            margin: 0 auto 40px;
             line-height: 1.7;
         }
 
@@ -177,16 +185,18 @@
         /* Projects Section with Parallax */
         .projects-section {
             padding: 100px 0;
-            background: white;
+            background: #fafafa;
+            
         }
 
         .section-title {
-            font-family: var(--accent-font);
             font-size: 3rem;
-            font-weight: 300;
+            font-weight: bold;
             text-align: center;
             margin-bottom: 80px;
-            color: var(--text-dark);
+            color: #d41c1c;
+            text-transform: uppercase;
+            font-family: Inter, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
 
         /* Masonry Grid */
@@ -211,7 +221,8 @@
 
         .project-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 30px 30px #212529;
+
         }
 
         .project-image {
@@ -238,12 +249,12 @@
         }
 
         .project-category {
-            font-size: 0.85rem;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--text-lighter);
             margin-bottom: 15px;
-            font-weight: 500;
+            font-weight: 700;
+            color: #d41c1c;
         }
 
         .project-description {
@@ -342,6 +353,55 @@
             height: 100%;
         }
 
+        /* Project Gallery Section */
+        .project-gallery {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .gallery-title {
+            font-family: var(--accent-font);
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 60px;
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+
         /* Project About Section */
         .project-about {
             padding: 80px 0;
@@ -391,7 +451,7 @@
 
         /* Footer */
         .footer {
-            background: var(--bg-light);
+            background: #fafafa;
             padding: 80px 0 40px;
             border-top: 1px solid var(--border-color);
         }
@@ -403,11 +463,12 @@
         }
 
         .footer-title {
-            font-family: var(--accent-font);
+            font-family: Inter, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             font-size: 2rem;
-            font-weight: 300;
+            font-weight: regular;
+            text-transform: uppercase;
             margin-bottom: 30px;
-            color: var(--text-dark);
+            color: #d41c1c;
         }
 
         .footer-links {
@@ -416,6 +477,7 @@
             gap: 40px;
             margin: 40px 0;
             flex-wrap: wrap;
+           
         }
 
         .footer-link {
@@ -426,6 +488,9 @@
             letter-spacing: 1px;
             font-size: 0.9rem;
             transition: color 0.3s ease;
+        }
+        .footer-link, .footer-link:visited {
+            color: var(--text-light);
         }
 
         .footer-link:hover {
@@ -453,6 +518,11 @@
             .project-detail-title {
                 font-size: 2.5rem;
             }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -477,6 +547,11 @@
             .hero-title {
                 font-size: 2.5rem;
             }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
         }
 
         /* Loading animation */
@@ -497,7 +572,7 @@
     <!-- Navigation Fixed (appears on scroll) -->
     <nav class="navbar navbar-expand-lg navbar-fixed" id="fixedNav">
         <div class="container">
-            <a class="navbar-brand-fixed" onclick="showPage('home')">SEU NOME</a>
+            <a class="navbar-brand-fixed" onclick="showPage('home')">MARCOS BRASILINO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -516,8 +591,9 @@
         <!-- Hero Header Full Screen -->
         <section id="home" class="hero-header">
             <div class="hero-content fade-in-up">
-                <h1 class="hero-title">SEU NOME</h1>
-                <p class="hero-subtitle">Fotógrafo & Videomaker</p>
+                <h1 class="hero-title">PORTFOLIO</h1>
+                <h1 class="hero-name">MARCOS BRASILINO</h1>
+                <p class="hero-subtitle">Fotógrafo & Filmmaker</p>
                 <p class="hero-description">
                     Especializado em capturar momentos únicos através da lente. 
                     Cada projeto conta uma história, cada imagem preserva uma emoção.
@@ -539,63 +615,63 @@
                 <div class="masonry-grid">
                     <!-- Projeto 1 -->
                     <article class="project-item fade-in-up" onclick="openProject('project1')">
-                        <img src="https://picsum.photos/400/600?random=1" alt="Retratos Artísticos" class="project-image">
+                        <img src="assets/h2logo.jpg" alt="Publicidade" class="project-image">
                         <div class="project-info">
-                            <h3 class="project-title">Retratos Artísticos</h3>
-                            <p class="project-category">Fotografia</p>
-                            <p class="project-description">Série de retratos explorando a personalidade e essência de cada modelo através de jogos de luz e sombra.</p>
+                            <h3 class="project-title">Publicidade</h3>
+                            <p class="project-category">Audiovisual</p>
+                            <p class="project-description">"Primeiro projeto para H2 Performance capturando a essência do proprietário</p>
                         </div>
                     </article>
 
                     <!-- Projeto 2 -->
                     <article class="project-item fade-in-up" onclick="openProject('project2')">
-                        <img src="https://picsum.photos/400/300?random=2" alt="Vídeo Promocional" class="project-image">
+                        <img src="assets/projetod.jpg" alt="Vídeo Promocional" class="project-image">
                         <div class="project-info">
-                            <h3 class="project-title">Vídeo Promocional</h3>
+                            <h3 class="project-title">Publicidade</h3>
                             <p class="project-category">Audiovisual</p>
-                            <p class="project-description">Produção audiovisual completa para marca de moda, explorando narrativa visual contemporânea.</p>
+                            <p class="project-description">Produção audiovisual completa para a escola de mecânica projeto D</p>
                         </div>
                     </article>
 
-                    <!-- Projeto 3 -->
+                          <!-- Projeto 3 -->
                     <article class="project-item fade-in-up" onclick="openProject('project3')">
-                        <img src="https://picsum.photos/400/500?random=3" alt="Paisagens Urbanas" class="project-image">
+                        <img src="assets/mulambe.jpg" alt="Vídeo Promocional" class="project-image">
                         <div class="project-info">
-                            <h3 class="project-title">Paisagens Urbanas</h3>
-                            <p class="project-category">Fotografia</p>
-                            <p class="project-description">Documentação visual da arquitetura e movimento urbano, capturando a energia da cidade.</p>
+                            <h3 class="project-title">Publicidade</h3>
+                            <p class="project-category">Audiovisual</p>
+                            <p class="project-description">Produção audiovisual completa para a loja Mulambe</p>
                         </div>
                     </article>
 
                     <!-- Projeto 4 -->
                     <article class="project-item fade-in-up" onclick="openProject('project4')">
-                        <img src="https://picsum.photos/400/450?random=4" alt="Documentário" class="project-image">
+                        <img src="https://picsum.photos/400/450?random=4" alt="Design" class="project-image">
                         <div class="project-info">
-                            <h3 class="project-title">Documentário</h3>
-                            <p class="project-category">Audiovisual</p>
-                            <p class="project-description">Documentário sobre artistas locais, explorando seus processos criativos e inspirações.</p>
+                            <h3 class="project-title">Design</h3>
+                            <p class="project-category">Design</p>
+                            <p class="project-description">Imagens e motions.</p>
                         </div>
                     </article>
 
                     <!-- Projeto 5 -->
                     <article class="project-item fade-in-up" onclick="openProject('project5')">
-                        <img src="https://picsum.photos/400/700?random=5" alt="Eventos Especiais" class="project-image">
+                        <img src="assets/revelacaodebebe.jpg" alt="Eventos Especiais" class="project-image">
                         <div class="project-info">
                             <h3 class="project-title">Eventos Especiais</h3>
                             <p class="project-category">Fotografia</p>
-                            <p class="project-description">Cobertura fotográfica de casamentos e eventos corporativos, preservando momentos únicos.</p>
+                            <p class="project-description">Cobertura fotográfica de casamentos e eventos, preservando momentos únicos.</p>
                         </div>
                     </article>
 
-                    <!-- Projeto 6 -->
+                  
                     <article class="project-item fade-in-up" onclick="openProject('project6')">
-                        <img src="https://picsum.photos/400/320?random=6" alt="Natureza" class="project-image">
+                        <img src="https://picsum.photos/400/320?random=6" alt="Pessoal" class="project-image">
                         <div class="project-info">
-                            <h3 class="project-title">Natureza</h3>
+                            <h3 class="project-title">Pessoal</h3>
                             <p class="project-category">Fotografia</p>
                             <p class="project-description">Exploração da beleza natural através de macro e paisagens, revelando detalhes únicos.</p>
                         </div>
-                    </article>
+                    </article> 
                 </div>
             </div>
         </section>
@@ -606,16 +682,15 @@
                 <div class="footer-content">
                     <h4 class="footer-title">Vamos Trabalhar Juntos</h4>
                     <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 0;">
-                        Interessado em colaborar? Entre em contato para discutirmos seu próximo projeto.
+                        Entre em contato para discutirmos seu próximo projeto.
                     </p>
                     <div class="footer-links">
-                        <a href="mailto:seu@email.com" class="footer-link">Email</a>
-                        <a href="#" class="footer-link">Instagram</a>
-                        <a href="#" class="footer-link">WhatsApp</a>
-                        <a href="#" class="footer-link">Behance</a>
-                        <a href="#" class="footer-link">YouTube</a>
+                        <a href="mailto:marshall49ers@gmail.com" class="footer-link">Email</a>
+                        <a href="https://www.instagram.com/mediamb3/" class="footer-link">Instagram</a>
+                        <a href="https://wa.me/5512981118411?text=Olá%2C%20quero%20saber%20mais!%20"  class="footer-link">WHATSAPP</a>
+                        <a href="https://www.youtube.com/@mb3_media" class="footer-link">YouTube</a>
                     </div>
-                    <p class="copyright">&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+                    <p class="copyright">&copy; 2025 Marcos Brasilino. Todos os direitos reservados.</p>
                 </div>
             </div>
         </footer>
@@ -651,6 +726,16 @@
             </div>
         </div>
 
+        <!-- Project Gallery -->
+        <div class="project-gallery">
+            <div class="container">
+                <h3 class="gallery-title">Galeria do Projeto</h3>
+                <div class="gallery-grid" id="galleryContent">
+                    <!-- Imagens da galeria serão inseridas aqui -->
+                </div>
+            </div>
+        </div>
+
         <!-- Project About -->
         <div class="project-about">
             <div class="container">
@@ -671,239 +756,181 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        // Dados dos projetos
-        const projectsData = {
-            project1: {
-                title: "Retratos Artísticos",
-                category: "Fotografia",
-                intro: "Uma exploração profunda da personalidade humana através de retratos íntimos e expressivos, utilizando técnicas avançadas de iluminação e composição.",
-                mainImage: "https://picsum.photos/800/1000?random=1",
-                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-                about: `
-                    <p class="about-text">Este projeto nasceu da necessidade de capturar não apenas a aparência física, mas a essência e personalidade de cada indivíduo retratado. Utilizando uma abordagem minimalista, cada sessão foi cuidadosamente planejada para criar um ambiente confortável onde a verdadeira personalidade do modelo pudesse emergir.</p>
-                    <p class="about-text">A técnica empregada combina iluminação natural e artificial, criando contrastes dramáticos que enfatizam as características únicas de cada pessoa. Cada retrato conta uma história única, revelando camadas de emoção e personalidade através do jogo de luz e sombra.</p>
-                `,
-                details: {
-                    "Cliente": "Projeto Pessoal",
-                    "Ano": "2024",
-                    "Técnica": "Fotografia Digital",
-                    "Equipamento": "Canon EOS R5, Lentes 85mm e 50mm"
-                }
-            },
-            project2: {
-                title: "Vídeo Promocional",
-                category: "Audiovisual",
-                intro: "Produção audiovisual completa para marca de moda sustentável, focando em narrativa visual que conecta valores da marca com o público-alvo.",
-                mainImage: "https://picsum.photos/800/600?random=2",
-                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-                about: `
-                    <p class="about-text">Desenvolvido para uma marca emergente de moda sustentável, este vídeo promocional combina estética contemporânea com uma mensagem poderosa sobre responsabilidade ambiental. O conceito visual foi criado para refletir os valores da marca através de cada frame.</p>
-                    <p class="about-text">A produção envolveu locações naturais, modelos que representam a diversidade da marca, e uma trilha sonora original que complementa perfeitamente a narrativa visual. Cada elemento foi cuidadosamente selecionado para criar uma experiência imersiva e memorável.</p>
-                `,
-                details: {
-                    "Cliente": "EcoFashion Brand",
-                    "Duração": "2:30 minutos",
-                    "Ano": "2024",
-                    "Equipe": "3 pessoas"
-                }
-            },
-            project3: {
-                title: "Paisagens Urbanas",
-                category: "Fotografia",
-                intro: "Documentação visual da transformação urbana contemporânea, capturando a intersecção entre arquitetura moderna e vida cotidiana.",
-                mainImage: "https://picsum.photos/800/900?random=3",
-                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-                about: `
-                    <p class="about-text">Este projeto documental explora a evolução constante do ambiente urbano, focando em como as pessoas se relacionam com os espaços arquitetônicos ao seu redor. Cada imagem captura um momento específico dessa interação dinâmica.</p>
-                    <p class="about-text">Utilizando diferentes perspectivas e horários do dia, o projeto revela as múltiplas facetas da vida urbana, desde o movimento frenético das horas de pico até os momentos contemplativos do fim de tarde. A série busca mostrar a beleza inesperada nos espaços cotidianos.</p>
-                `,
-                details: {
-                    "Período": "6 meses",
-                    "Locações": "15 pontos urbanos",
-                    "Técnica": "Fotografia de Rua",
-                    "Ano": "2023-2024"
-                }
-            },
-            project4: {
-                title: "Documentário",
-                category: "Audiovisual",
-                intro: "Documentário de curta-metragem sobre artistas locais emergentes e seus processos criativos únicos.",
-                mainImage: "https://picsum.photos/800/700?random=4",
-                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-                about: `
-                    <p class="about-text">Este documentário íntimo acompanha cinco artistas locais em diferentes estágios de suas carreiras, revelando os desafios e inspirações que moldam seu trabalho criativo. Cada história é única, mas todas compartilham a paixão pela arte como forma de expressão.</p>
-                    <p class="about-text">Filmado ao longo de três meses, o projeto oferece um olhar autêntico sobre a cena artística local, explorando temas como inspiração, processo criativo, superação de obstáculos e a importância da comunidade artística no desenvolvimento individual.</p>
-                `,
-                details: {
-                    "Duração": "25 minutos",
-                    "Artistas Featured": "5 artistas",
-                    "Produção": "3 meses",
-                    "Festivais": "2 seleções"
-                }
-            },
-            project5: {
-                title: "Eventos Especiais",
-                category: "Fotografia",
-                intro: "Cobertura fotográfica especializada em casamentos e eventos corporativos, focando em momentos espontâneos e emoções genuínas.",
-                mainImage: "https://picsum.photos/800/1200?random=5",
-                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-                about: `
-                    <p class="about-text">A fotografia de eventos requer uma combinação única de habilidades técnicas e sensibilidade emocional. Este portfólio representa anos de experiência capturando os momentos mais importantes na vida das pessoas, sempre com discrição e profissionalismo.</p>
-                    <p class="about-text">Cada evento é único e requer uma abordagem personalizada. Desde a cerimônia mais íntima até a celebração mais elaborada, o objetivo é sempre o mesmo: preservar as emoções autênticas e criar memórias visuais que durem para toda a vida.</p>
-                `,
-                details: {
-                    "Eventos Cobertos": "50+ eventos",
-                    "Especialidade": "Casamentos e Corporativo",
-                    "Experiência": "5 anos",
-                    "Estilo": "Documental e Artístico"
-                }
-            },
-            project6: {
-                title: "Natureza",
-                category: "Fotografia",
-                intro: "Exploração da beleza natural através de fotografia macro e paisagens, revelando detalhes imperceptíveis ao olho humano.",
-                mainImage: "https://picsum.photos/800/800?random=6",
-                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-                about: `
-                    <p class="about-text">Este projeto representa uma jornada de descoberta através da fotografia de natureza, combinando técnicas de macro para revelar mundos microscópicos com paisagens amplas que capturam a grandiosidade do mundo natural.</p>
-                    <p class="about-text">Cada expedição fotográfica é uma oportunidade de conexão profunda com a natureza, resultando em imagens que não apenas documentam, mas celebram a biodiversidade e beleza do nosso planeta. O trabalho busca inspirar consciência ambiental através da arte visual.</p>
-                `,
-                details: {
-                    "Expedições": "12 locações naturais",
-                    "Técnicas": "Macro e Paisagem",
-                    "Período": "1 ano",
-                    "Equipamento": "Lentes especializadas macro"
-                }
+    // Dados dos projetos
+    const projectsData = {
+        project1: {
+            title: "Retratos Artísticos",
+            category: "Fotografia",
+            intro: "Uma exploração profunda da personalidade humana através de retratos íntimos e expressivos, utilizando técnicas avançadas de iluminação e composição.",
+            mainImage: "assets/h2performance.jpg",
+            videoUrl: "https://www.youtube.com/embed/_BaSnC_FWGg?si=-YQGQI_LK2B_e35r",
+            galleryImages: [
+                "assets/h2logo.jpg",
+                "https://picsum.photos/400/300?random=11",
+                "https://picsum.photos/400/400?random=12",
+                "https://picsum.photos/400/350?random=13",
+                "https://picsum.photos/400/450?random=14",
+                "https://picsum.photos/400/320?random=15"
+            ],
+            about: `
+                <p class="about-text">Este projeto foi o primeiro criado para a H2 Performance, uma oficina especializada em automóveis de alta performance sediada em Jacareí. Este vídeo nasceu da necessidade de capturar não apenas a aparência visual, mas a essência e personalidade do proprietário.</p>
+                <p class="about-text">A técnica empregada combina iluminação natural e artificial, criando contrastes dramáticos que enfatizam características únicas. Cada retrato conta uma história revelando camadas de emoção através do jogo de luz e sombra.</p>
+            `,
+            details: {
+                "Cliente": "Oficina H2 Performance",
+                "Ano": "2025",
+                "Técnica": "Fotografia Digital",
+                "Equipamento": "Sony a6300, Lente do Kit"
             }
-        };
-
-        // Função para mostrar páginas
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            if (pageId === 'home') {
-                document.getElementById('homePage').classList.add('active');
-                // Reset scroll position
-                window.scrollTo(0, 0);
-                // Reset navbar visibility
-                document.getElementById('fixedNav').classList.remove('visible');
+        },
+        project2: {
+            title: "Vídeo Promocional",
+            category: "Audiovisual",
+            intro: "Produção audiovisual completa para a escola Projeto D, com narrativa visual voltada para performance automotiva.",
+            mainImage: "assets/projetod.jpg",
+            videoUrl: "https://www.youtube.com/embed/N2l5VCTSDnE?rel=0",
+            galleryImages: [
+                "assets/projetod.jpg",
+                "https://picsum.photos/400/300?random=21",
+                "https://picsum.photos/400/400?random=22",
+                "https://picsum.photos/400/350?random=23",
+                "https://picsum.photos/400/450?random=24"
+            ],
+            about: `
+                <p class="about-text">Desenvolvido para a escola Projeto D, este vídeo promocional mostra a essência da mecânica prática unida à paixão automotiva. O objetivo foi destacar o aprendizado de forma envolvente e moderna.</p>
+                <p class="about-text">A produção envolveu gravações internas, externas e captação de áudio direto, criando uma narrativa dinâmica para atrair novos alunos.</p>
+            `,
+            details: {
+                "Cliente": "Escola Projeto D",
+                "Ano": "2024",
+                "Formato": "Vídeo Promocional",
+                "Equipe": "3 pessoas"
+            }
+        },
+        project3: {
+            title: "Publicidade para Loja Mulambe",
+            category: "Audiovisual",
+            intro: "Campanha publicitária para a loja de roupas Mulambe, destacando estilo urbano e autenticidade.",
+            mainImage: "assets/mulambe.jpg",
+            videoUrl: "https://www.youtube.com/embed/qEKXEnmk6ew?rel=0", 
+            galleryImages: [
+                "assets/cartasciganas02.jpg",
+                "assets/cartasciganas03.jpg",
+                "assets/cartasciganas04.jpg",
+            ],
+            about: `
+                <p class="about-text">Este projeto foi criado para fortalecer a presença da loja Mulambe no digital. A ideia foi unir moda e lifestyle com autenticidade, conectando a marca ao público jovem.</p>
+            `,
+            details: {
+                "Cliente": "Loja Mulambe",
+                "Ano": "2024",
+                "Formato": "Campanha Publicitária",
+                "Local": "Jacareí, SP"
             }
         }
+    };
 
-        // Função para abrir projeto
-        function openProject(projectId) {
-            const project = projectsData[projectId];
-            if (!project) return;
+    // Função para mostrar páginas
+    function showPage(pageId) {
+        document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+        });
 
-            // Preencher dados do projeto
-            document.getElementById('projectTitle').textContent = project.title;
-            document.getElementById('projectCategory').textContent = project.category;
-            document.getElementById('projectIntro').textContent = project.intro;
-            document.getElementById('projectMainImage').src = project.mainImage;
-            document.getElementById('projectMainImage').alt = project.title;
-            document.getElementById('projectVideo').src = project.videoUrl;
-            document.getElementById('projectAbout').innerHTML = project.about;
-
-            // Preencher detalhes do projeto
-            const detailsContainer = document.getElementById('projectDetails');
-            detailsContainer.innerHTML = '';
-            
-            Object.entries(project.details).forEach(([key, value]) => {
-                const detailItem = document.createElement('div');
-                detailItem.className = 'detail-item';
-                detailItem.innerHTML = `
-                    <h4>${key}</h4>
-                    <p>${value}</p>
-                `;
-                detailsContainer.appendChild(detailItem);
-            });
-
-            // Mostrar página do projeto
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            document.getElementById('projectPage').classList.add('active');
-            
-            // Scroll to top
+        if (pageId === 'home') {
+            document.getElementById('homePage').classList.add('active');
             window.scrollTo(0, 0);
-            
-            // Show navbar immediately on project page
-            document.getElementById('fixedNav').classList.add('visible');
+            document.getElementById('fixedNav').classList.remove('visible');
         }
+    }
 
-        // Função para scroll suave para seções (apenas na home)
-        function scrollToSection(sectionId) {
-            if (document.getElementById('homePage').classList.contains('active')) {
+    // Função para abrir projeto
+    function openProject(projectId) {
+        const project = projectsData[projectId];
+        if (!project) return;
+
+        document.getElementById('projectTitle').textContent = project.title;
+        document.getElementById('projectCategory').textContent = project.category;
+        document.getElementById('projectIntro').textContent = project.intro;
+        document.getElementById('projectMainImage').src = project.mainImage;
+        document.getElementById('projectMainImage').alt = project.title;
+        document.getElementById('projectVideo').src = project.videoUrl;
+        document.getElementById('projectAbout').innerHTML = project.about;
+
+        // Galeria
+        const galleryContent = document.getElementById('galleryContent');
+        galleryContent.innerHTML = '';
+        project.galleryImages.forEach(img => {
+            const div = document.createElement('div');
+            div.className = 'gallery-item';
+            div.innerHTML = `<img src="${img}" class="gallery-image" alt="${project.title}">`;
+            galleryContent.appendChild(div);
+        });
+
+        // Detalhes
+        const detailsContainer = document.getElementById('projectDetails');
+        detailsContainer.innerHTML = '';
+        Object.entries(project.details).forEach(([key, value]) => {
+            const detailItem = document.createElement('div');
+            detailItem.className = 'detail-item';
+            detailItem.innerHTML = `<h4>${key}</h4><p>${value}</p>`;
+            detailsContainer.appendChild(detailItem);
+        });
+
+        document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+        });
+        document.getElementById('projectPage').classList.add('active');
+
+        window.scrollTo(0, 0);
+        document.getElementById('fixedNav').classList.add('visible');
+    }
+
+    // Scroll suave
+    function scrollToSection(sectionId) {
+        if (document.getElementById('homePage').classList.contains('active')) {
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        } else {
+            showPage('home');
+            setTimeout(() => {
                 const target = document.getElementById(sectionId);
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
-            } else {
-                // Se não estiver na home, volta pra home e depois scrolla
-                showPage('home');
-                setTimeout(() => {
-                    const target = document.getElementById(sectionId);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }, 100);
-            }
+            }, 100);
         }
+    }
 
-        // Navigation aparecer no scroll (apenas na home)
-        window.addEventListener('scroll', function() {
-            if (document.getElementById('homePage').classList.contains('active')) {
-                const fixedNav = document.getElementById('fixedNav');
-                const scrolled = window.scrollY > window.innerHeight * 0.3;
-                
-                if (scrolled) {
-                    fixedNav.classList.add('visible');
-                } else {
-                    fixedNav.classList.remove('visible');
-                }
-            }
+    // Navbar aparece no scroll
+    window.addEventListener('scroll', function() {
+        if (document.getElementById('homePage').classList.contains('active')) {
+            const fixedNav = document.getElementById('fixedNav');
+            const scrolled = window.scrollY > window.innerHeight * 0.3;
+            fixedNav.classList.toggle('visible', scrolled);
+        }
+    });
+
+    // Animações de entrada
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
         });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        // Intersection Observer para animações (apenas na home)
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    });
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
+    // Botão voltar do navegador
+    window.addEventListener('popstate', function(event) {
+        if (event.state && event.state.page) {
+            showPage(event.state.page);
+        } else {
+            showPage('home');
+        }
+    });
 
-        // Observar elementos para animação
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.fade-in-up').forEach(el => {
-                observer.observe(el);
-            });
-        });
-
-        // Handle browser back button
-        window.addEventListener('popstate', function(event) {
-            if (event.state && event.state.page) {
-                showPage(event.state.page);
-            } else {
-                showPage('home');
-            }
-        });
-
-        // Set initial state
-        window.history.replaceState({page: 'home'}, '', window.location.href);
-    </script>
-</body>
-</html>
+    window.history.replaceState({page: 'home'}, '', window.location.href);
+</script>
